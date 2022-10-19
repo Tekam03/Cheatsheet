@@ -33,7 +33,9 @@
 
 ### FFUF - Fast Web Fuzzer
 
-- Directory discovery - `ffuf -w /usr/share/wordlists/dirb/common.txt -u http://example.com/FUZZ`
+- Directory discovery - 
+
+`ffuf -w /usr/share/wordlists/dirb/common.txt -u http://example.com/FUZZ`
 
 ffuf -w /path/to/wordlist -u https://target/FUZZ
 
