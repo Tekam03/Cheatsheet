@@ -50,7 +50,7 @@ browser extension that detects technologies used on websites
 
 # Enumeration/Scanning
 
-## ffuf 
+<!-- ## ffuf 
 **Fast Web Fuzzer** 
 
 Changes the word **FUZZ** in the url with a **wordlist** and checks if the url exists
@@ -66,20 +66,29 @@ ffuf -w /path/to/wordlist -u http://target/FUZZ
 ffuf -w /path/to/wordlist -u http://target/FUZZ -mc 200
 ```
 
-<!-- **Adding classical header (some WAF bypass)**
+**Adding classical header (some WAF bypass)**
 ```
 ffuf -c -w "/opt/host/main.txt:FILE" -H "X-Originating-IP: 127.0.0.1, X-Forwarded-For: 127.0.0.1, X-Remote-IP: 127.0.0.1, X-Remote-Addr: 127.0.0.1, X-Client-IP: 127.0.0.1" -fs 5682,0 -u https://target/FUZZ
-``` -->
+``` 
 
----
+-->
 
 ## wfuzz
 **Web application fuzzer**
 
 enumerate directories and files
 
-options :
-- -c : show only the status code
+`the url must contain **FUZZ** to be replaced by the wordlist`
+
+
+**options** :
+- **-c** : show the **status code** in **color**
+- **-z** : followed with **payload** a comma then what you want
+  - **file** : to use a **wordlist**
+  - **range** : to use a **range**
+  - **list** : to use a **list** of words
+
+
 
 ## dirb
 **Web Content Scanner**
