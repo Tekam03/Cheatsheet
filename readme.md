@@ -35,7 +35,7 @@
 
 - Directory discovery - 
 
-```
+```bash
 ffuf -w /usr/share/wordlists/dirb/common.txt -u http://example.com/FUZZ
 ```
 
