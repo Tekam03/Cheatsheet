@@ -9,7 +9,7 @@
   - [Google Dorks](#google-dorks)
   - [Wappalyzer](#wappalyzer)
 * [Enumeration/Scanning](#enumerationscanning)
-  - [FFUF](#ffuf)
+  - [wfuzz](#wfuzz)
   - [dirb](#dirb)
 * [Exploitation](#exploitation)
 * [Privilege Escalation](#privilege-escalation)
