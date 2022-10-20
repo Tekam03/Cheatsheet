@@ -176,6 +176,7 @@ gobuster fuzz -u http://target/FUZZ -w /path/to/wordlist
 ## whatweb
 **Gives information about a website**
 
+
 **options** :
 - **-a** : aggressivity
   - **1** : stealthy
@@ -194,6 +195,31 @@ With **aggressivity** and **verbose** :
 ```
 whatweb -a 3 -v http://target
 ```
+
+---
+
+## nikto
+**Web server scanner**
+
+Returns generic information about config, vulnerabilities, etc
+
+**options** :
+- **-h** : followed by the **host**
+- **-root** : followed by the **root directory**
+
+**examples** :
+
+Basic usage :
+```
+nikto -h http://target
+```
+
+With **root directory** :
+```
+nikto -h http://target -root /path/to/root
+```
+
+---
 
 ## wpscan
 **WordPress website scanner**
