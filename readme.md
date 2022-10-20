@@ -52,6 +52,13 @@ https://ui.ctsearch.entrust.com/ui/ctsearchui
 - inurl:example - search for a specific word in the url
 - filetype:pdf - search for a specific file type
 
+**examples**
+
+exclude any website that are www.domain.com but only website that has domain.com in it
+```
+-site:www.domain.com site:*.domain.com
+```
+
 ---
 
 ## Wappalyzer
