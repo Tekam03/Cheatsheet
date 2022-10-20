@@ -91,6 +91,7 @@ enumerate directories and files
   - **range** : to use a **range**
   - **list** : to use a **list** of words
 - **-d** : to use a **POST body**
+- **-H** : to use a **HEADER** (ex : "Host: FUZZ.test.com")
 - **--hc/sc CODE** : to **hide/show** the **status code**
 
 
@@ -350,3 +351,9 @@ sudo nmap -F -sV -O http://target
 # Privilege Escalation
 
 # Post-exploitation
+
+
+# TO DO
+sublist3r (dns)
+dnsrecon
+
