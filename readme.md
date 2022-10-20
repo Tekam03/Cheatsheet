@@ -254,6 +254,79 @@ wpscan --url http://target -U /path/to/wordlist -P /path/to/wordlist
 
 # Scanning
 
+## nmap
+**Network Scanner**
+
+Can find open ports, services, etc.
+
+**options** :
+- **Important options**:
+  - **-sV** : Enable version detection
+  - **-O** : Enable OS detection
+  - **--script** : followed by the **script name** to run (ex: vuln)
+  - **-A** : Enable OS detection, version detection, script scanning, and traceroute
+
+- **Scan Type** *(Facultative)*:
+  - **-sS** : TCP SYN scan (**default**)
+  - **-sT** : TCP connect scan (**default without root**)
+  - **-sU** : UDP scan
+
+- **Host Discovery** *(Facultative)* :
+  - **-sn** : Disable port scanning. Host discovery only. (Range of IP)
+  - **-Pn** : Disable host discovery. Port scan only. (Range of IP)
+
+- **Port scanning** *(Facultative)*:
+  - **-p** : followed by the **port** to scan (ex: 80)
+  - **-p** : followed by the **ports range** to scan (ex: 1-100)
+  - **-p** : followed by the **ports list** to scan (ex: 80,443,8080)
+  - **-p** : followed by the **service name** to scan (ex: http,https)
+  - **-p-** : scan all ports
+  - **-F** : scan **100 most common ports**
+  - **--top-ports** : followed by the top **number of ports** to scan (ex: 100)
+
+- **Aggressivity** *(Facultative)*:
+  - **-T0** : Paranoid
+  - **-T1** : Sneaky
+  - **-T2** : Polite
+  - **-T3** : Normal
+  - **-T4** : Aggressive
+  - **-T5** : Insane
+
+**examples** :
+
+Basic usage :
+```
+nmap http://target
+```
+
+With **version detection** :
+```
+nmap -sV http://target
+```
+
+With **OS detection** :
+```
+nmap -O http://target
+```
+
+With **script scanning** :
+```
+nmap --script vuln http://target
+```
+
+Normal scan :
+```
+sudo nmap -sV -O http://target
+```
+
+Normal Fast scan :
+```
+sudo nmap -F -sV -O http://target
+```
+```
+
+
+
 # Exploitation
 
 # Privilege Escalation
