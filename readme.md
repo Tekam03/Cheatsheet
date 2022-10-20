@@ -267,7 +267,7 @@ Can find open ports, services, etc.
   - **-sV** : Enable version detection
   - **-O** : Enable OS detection
   - **--script** : followed by the **script name** to run (ex: vuln)
-  - **-A** : Enable OS detection, version detection, script scanning, and traceroute
+  - **-A** : Enable OS detection, version detection, script scanning, and traceroute (Very slow)
 
 - **Scan Type** *(Facultative)*:
   - **-sS** : TCP SYN scan (**default**)
