@@ -28,6 +28,13 @@
 
 # Information Gathering
 
+## Usefull Websites
+
+### SSL/TLS Certificate Logs
+
+https://crt.sh/
+
+https://ui.ctsearch.entrust.com/ui/ctsearchui
 
 
 ## Common pages
@@ -53,6 +60,7 @@ browser extension that detects technologies used on websites
 - https://www.wappalyzer.com/
 
 ---
+
 
 # Enumeration
 **Good wordlists** :
