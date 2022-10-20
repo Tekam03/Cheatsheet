@@ -137,6 +137,7 @@ With a **wordlist** and a **file extension** :
 dirb http://target /path/to/wordlist -X .txt
 ```
 
+---
 ## gobuster
 **Web content scanner**
 
@@ -168,6 +169,30 @@ gobuster dns -d target.com -w /path/to/wordlist
 Enumerate with FUZZ :
 ```
 gobuster fuzz -u http://target/FUZZ -w /path/to/wordlist
+```
+
+---
+
+## whatweb
+**Gives information about a website**
+
+**options** :
+- **-a** : aggressivity
+  - **1** : stealthy
+  - **3** : Aggressive
+  - **4** : Heavy
+- **-v** : verbose
+
+**examples** :
+
+Basic usage :
+```
+whatweb http://target
+```
+
+With **aggressivity** and **verbose** :
+```
+whatweb -a 3 -v http://target
 ```
 
 ## wpscan
