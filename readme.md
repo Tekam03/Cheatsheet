@@ -12,8 +12,11 @@
   - [wfuzz (Enumerate anything)](#wfuzz)
   - [dirb (Web content scanner)](#dirb)
   - [gobuster (Web content scanner)](#gobuster)
+  - [whatweb (Web content scanner)](#whatweb)
+  - [nikto (Web server scanner)](#nikto)
   - [wpscan (Wordpress)](#wpscan)
 * [Scanning](#scanning)
+  - [nmap (Network scanner)](#nmap)
 * [Exploitation](#exploitation)
 * [Privilege Escalation](#privilege-escalation)
 * [Post Exploitation](#post-exploitation)
@@ -323,7 +326,7 @@ Normal Fast scan :
 ```
 sudo nmap -F -sV -O http://target
 ```
-```
+
 
 
 
