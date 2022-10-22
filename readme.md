@@ -76,6 +76,37 @@ browser extension that detects technologies used on websites
 
 ---
 
+## ffuf
+**Web application fuzzer**
+
+Based on wfuzz
+
+**options** :
+- **-c** : Colorize the output
+- **-w** : Wordlist
+- **-u** : URL
+- **-H** : Headers (ex: "Host: FUZZ.example.com")
+- **-X** : HTTP method (ex: GET, POST, PUT, DELETE)
+- **-e** : Extensions (ex: .php,.html)
+- **-d** : Data (ex: "username=admin&password=FUZZ")
+
+- **Matching** : 
+  - **-mc** : Match status code
+  - **-mr** : Match regex
+  - **-mw** : Match word
+  - **-ml** : Match length
+  - **-mh** : Match headers
+  - **-ms** : Match size
+
+**examples** :
+
+
+Username enumeration
+```
+ffuf -w /usr/share/wordlists/seclists/Usernames/Names/names.txt -H "Content-Type: application/x-www-form-urlencoded" -d "username=FUZZ&password=test" -u http://website.com/customers/signup -mr "username already exists"
+```
+
+
 ## wfuzz
 **Web application fuzzer**
 
