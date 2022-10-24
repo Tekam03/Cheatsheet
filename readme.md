@@ -9,6 +9,7 @@
   - [Google Dorks](#google-dorks)
   - [Wappalyzer](#wappalyzer)
 * [Enumeration](#enumeration)
+  - [ffuf](#ffuf)
   - [wfuzz (Enumerate anything)](#wfuzz)
   - [dirb (Web content scanner)](#dirb)
   - [gobuster (Web content scanner)](#gobuster)
