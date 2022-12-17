@@ -541,8 +541,12 @@ Find **suid** binaries :
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-Script to find **suid** binaries :
-[**suid3num**](https://github.com/Tekam03/Cheatsheet/tree/main/Executables/suid3num.py)
+Better script to find **suid** binaries :
+[**suid3num**](https://raw.githubusercontent.com/Tekam03/Cheatsheet/main/Executables/suid3num.py)
+
+---
+
+
 
 
 
